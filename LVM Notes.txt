@@ -1,0 +1,42 @@
+LVM Concept
+-----------
+
+1) Before you start, you need to check for block devices that can be used to create physical volumes
+  
+   sudo lvmdiskscan
+
+2) Create physical volume using 
+  
+   sudo pvcreate /dev/sda     (here "/dev/sda" is disk space you can get this details when u type "lsblk" or df -h or df --o)
+
+3) Create volume group using 
+  
+   sudo vgcreate vgdata /dev/sda ( here "vgdata" is name for volume group and "/dev/sda" same as before i explained )
+
+4) Create logical volume using 
+   
+   sudo lvcreate -n lvdata -L +3G  vgdata ( Here "lvdata" is the name of logical volume and "+3G" is the storage allocated for logical volume )
+
+5) Making file system formate
+
+   sudo mkfs.ext4 /dev/vgData/lvdata ( /dev/volumegroupname/logicalvolumegroupname )
+
+6) Creating directory using mkdir for logicalvolume
+  
+   mkdir /lvg  ( Here lvg is just directory to mount that lvdata )
+
+7) Mounting this directory to lvdata
+  
+   mount /dev/vgdata/lvdata /lvg
+
+8) To make it permanent on system boot, add the following entry to /etc/fstab
+
+   /dev/vgData/lvdata /mnt/lvdata ext4 defaults,nofail 0 0    
+
+9) In order to extend an existing VG with additional disks, you need to do the following (assuming sdc is the new disk)
+   
+     
+
+
+
+

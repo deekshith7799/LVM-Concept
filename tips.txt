@@ -1,0 +1,32 @@
+www.doodly.com for creating image based videos s
+
+ Installating LAMP in aws ami 2 instance
+1) sudo yum update -y
+2) sudo amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2
+3) cat /etc/system-release
+4) sudo yum install -y httpd mariadb-server
+5) sudo systemctl start httpd
+6) sudo systemctl enable httpd
+go this website for more information
+
+
+
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-lamp-amazon-linux-2.html
+
+s
+@TechnicalGuftgu
+Good Evening, Namaste and Wailekum Asalam Dost. And to answer you question. 
+192.168.10.0/27 - For Network address
+192.168.10.1/27 - VPC Router
+192.168.10.2/27- For DNS server for that VPC
+192.168.10.3/27 - AWS didn't tell anything about this yet.
+192.168.10.31/27 - Net Broadcasting, since VPC does not have broadcasting.
+
+13401a03c3@D....aws company partner account
+7799455932Deek.....irctc app password
+
+sudo chmod 2775 /var/www && find /var/www -type d -exec sudo chmod 2775 {} \;
+drwxrwsr-x  4 root root   33 Feb  1 05:52 www
+dr----S---  4 root root   33 Feb  1 05:52 www
+
+
